@@ -87,8 +87,8 @@ export async function createTrip(app: FastifyInstance) {
         html: `
           <div>
           <p style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
-          Você solicitou a criação de uma viagem para <strong>${destination}</strong>, Brasil nas datas de <strong> ${formattedStartsDate}
-          a ${formattedEndsDate}</strong> </p>
+          Você solicitou a criação de uma viagem para <strong>${destination}</strong>, nas datas de <strong> ${formattedStartsDate} </strong>
+          a <strong>${formattedEndsDate}</strong> </p>
           <p></p>
           <p>Para confirmar sua viagem, clique no link abaixo:</p>
           <p></p>
