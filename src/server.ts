@@ -5,6 +5,7 @@ import cors from "@fastify/cors"
 import { createTrip } from "./routes/create-trip"
 import { confirmTrip } from "./routes/confim-trip"
 import { confirmParticipants } from "./routes/confirm-participant"
+import { createActivities } from "./routes/create-activities"
 
 const app = fastify()
 
@@ -14,6 +15,7 @@ app.setSerializerCompiler(serializerCompiler)
 app.register(createTrip)
 app.register(confirmTrip)
 app.register(confirmParticipants)
+app.register(createActivities)
 
 app.register(cors, {
   origin: "*"
