@@ -2,6 +2,8 @@ import fastify from "fastify"
 import { validatorCompiler, serializerCompiler } from "fastify-type-provider-zod"
 import cors from "@fastify/cors"
 
+import { errorHandler } from "./error-handler"
+
 import { createTrip } from "./routes/create-trip"
 import { confirmTrip } from "./routes/confim-trip"
 import { confirmParticipants } from "./routes/confirm-participant"
@@ -19,6 +21,8 @@ const app = fastify()
 
 app.setValidatorCompiler(validatorCompiler)
 app.setSerializerCompiler(serializerCompiler)
+
+app.setErrorHandler(errorHandler)
 
 app.register(createTrip)
 app.register(confirmTrip)
